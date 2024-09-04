@@ -1,7 +1,7 @@
 const { error } = require('console');
 const fs = require('fs');
 
-fs.unlink("hello.txt",function(err){
+fs.readFile("./bye.txt",'utf8',function(err,data){
     if(err) console.error(error.message);
-    else console.log("done");
+    else console.log(data);
 })
