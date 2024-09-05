@@ -6,10 +6,19 @@
 //     else console.log(data);
 // })
 
-const http = require('http');
+// const http = require('http');
 
-const server= http.createServer(function(req,res){
-    res.end("hello world");
+// const server= http.createServer(function(req,res){
+//     res.end("hello world");
+// })
+
+// server.listen(3000);
+
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hey World')
 })
 
-server.listen(3000);
+app.listen(3000)
