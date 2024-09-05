@@ -17,6 +17,16 @@
 const express = require('express')
 const app = express()
 
+app.use(function(req, rs, next){
+    console.log("middleware chala");
+    next();
+})
+
+app.use(function(req, res, next){
+    console.log("middleware fir chala");
+    next();
+})
+
 app.get('/', function (req, res) {
   res.send('Hey World')
 })
